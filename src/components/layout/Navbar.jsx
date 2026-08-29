@@ -6,7 +6,7 @@ import { GiCactus } from 'react-icons/gi';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import { media } from '../../styles/theme';
-import { whatsappLink } from '../../data/siteConfig';
+import { orderLink } from '../../data/siteConfig';
 
 const links = [
   { label: 'Início', href: '#home' },
@@ -54,7 +54,7 @@ const Logo = styled.a`
   }
 
   span {
-    color: ${({ theme }) => theme.colors.fireLight};
+    color: ${({ theme }) => theme.colors.cactusLight};
   }
 `;
 
@@ -85,7 +85,7 @@ const NavLink = styled.a`
     bottom: -6px;
     width: 0;
     height: 2px;
-    background: ${({ theme }) => theme.colors.fireLight};
+    background: ${({ theme }) => theme.colors.cactusLight};
     transition: width 0.25s ease;
   }
 
@@ -142,7 +142,7 @@ const MobileLink = styled(motion.a)`
   color: ${({ theme }) => theme.colors.cream};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.fireLight};
+    color: ${({ theme }) => theme.colors.cactusLight};
   }
 `;
 
@@ -180,7 +180,7 @@ const Navbar = () => {
           <Actions>
             <CtaButton
               as="a"
-              href={whatsappLink('Olá! Quero fazer um pedido na Cactus Burguer 🌵🍔')}
+              href={orderLink}
               target="_blank"
               rel="noopener noreferrer"
               $variant="primary"
@@ -223,14 +223,14 @@ const Navbar = () => {
               </MobileLink>
             ))}
             <Button
-              href={whatsappLink('Olá! Quero fazer um pedido na Cactus Burguer 🌵🍔')}
+              href={orderLink}
               target="_blank"
               rel="noopener noreferrer"
               $variant="primary"
               $size="lg"
               onClick={() => setOpen(false)}
             >
-              Peça pelo WhatsApp
+              Fazer pedido
             </Button>
           </MobileMenu>
         )}

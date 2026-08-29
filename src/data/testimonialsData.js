@@ -10,7 +10,7 @@ export const testimonials = [
     id: 2,
     name: 'Rafael Andrade',
     role: 'Google Reviews',
-    quote: 'Ambiente incrível, atendimento rápido e o Cactus Gourmet é surreal. Já virou parada obrigatória.',
+    quote: 'Ambiente incrível, atendimento rápido e a Maria Bonita é surreal. Já virou parada obrigatória.',
     rating: 5,
   },
   {
@@ -24,7 +24,7 @@ export const testimonials = [
     id: 4,
     name: 'Diego Farias',
     role: 'Cliente frequente',
-    quote: 'Lugar aconchegante, música boa e o Deserto Picante é para quem é corajoso. Recomendo muito!',
+    quote: 'Lugar aconchegante, música boa e o Lampião é para quem é corajoso. Recomendo muito!',
     rating: 4,
   },
 ];

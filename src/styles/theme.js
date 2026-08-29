@@ -11,8 +11,9 @@ const theme = {
     fire: '#C1440E',
     fireLight: '#E4622B',
     ember: '#8C2F0E',
-    cactus: '#5C7A4E',
-    cactusLight: '#7C9473',
+    // Cores oficiais da marca: verde usado como destaque principal (CTAs, links, ícones, badges)
+    cactus: '#9FD93E',
+    cactusLight: '#B6EA51',
     cream: '#FBF3E4',
     textDark: '#241B14',
     textMuted: '#5A4A3A',

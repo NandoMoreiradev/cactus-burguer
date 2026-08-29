@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa';
-import { whatsappLink } from '../../data/siteConfig';
+import { FaShoppingBag } from 'react-icons/fa';
+import { orderLink } from '../../data/siteConfig';
 
 const Float = styled(motion.a)`
   position: fixed;
@@ -11,13 +11,13 @@ const Float = styled(motion.a)`
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #25d366;
+  background: ${({ theme }) => theme.colors.cactusLight};
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.charcoal};
   font-size: 1.7rem;
-  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 10px 24px rgba(182, 234, 81, 0.5);
 
   &:hover {
     filter: brightness(1.05);
@@ -26,17 +26,17 @@ const Float = styled(motion.a)`
 
 const WhatsAppButton = () => (
   <Float
-    href={whatsappLink('Olá! Quero fazer um pedido na Cactus Burguer 🌵🍔')}
+    href={orderLink}
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Pedir pelo WhatsApp"
+    aria-label="Fazer pedido"
     initial={{ scale: 0, opacity: 0 }}
     animate={{ scale: 1, opacity: 1 }}
     transition={{ duration: 0.4, delay: 1 }}
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.95 }}
   >
-    <FaWhatsapp />
+    <FaShoppingBag />
   </Float>
 );
 

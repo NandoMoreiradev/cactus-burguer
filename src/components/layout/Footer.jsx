@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { GiCactus } from 'react-icons/gi';
-import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import Container from '../ui/Container';
 import { media } from '../../styles/theme';
 import siteConfig from '../../data/siteConfig';
@@ -39,7 +39,7 @@ const Logo = styled.div`
   }
 
   span {
-    color: ${({ theme }) => theme.colors.fireLight};
+    color: ${({ theme }) => theme.colors.cactusLight};
   }
 `;
 
@@ -79,7 +79,7 @@ const Col = styled.div`
   }
 
   a:hover {
-    color: ${({ theme }) => theme.colors.fireLight};
+    color: ${({ theme }) => theme.colors.cactusLight};
   }
 `;
 
@@ -113,8 +113,9 @@ const Socials = styled.div`
     transition: all 0.2s ease;
 
     &:hover {
-      background: ${({ theme }) => theme.colors.fire};
-      border-color: ${({ theme }) => theme.colors.fire};
+      background: ${({ theme }) => theme.colors.cactus};
+      border-color: ${({ theme }) => theme.colors.cactus};
+      color: ${({ theme }) => theme.colors.charcoal};
     }
   }
 `;
@@ -131,7 +132,7 @@ const Footer = () => {
               <GiCactus />
               Cactus<span>Burguer</span>
             </Logo>
-            <Tagline>{siteConfig.tagline} — feito com fogo, tempero e orgulho de Aracaju.</Tagline>
+            <Tagline>{siteConfig.tagline}, direto de Aracaju para você.</Tagline>
           </div>
 
           <Cols>
@@ -145,8 +146,14 @@ const Footer = () => {
             <Col>
               <h5>Contato</h5>
               <p>{siteConfig.phoneDisplay}</p>
-              <p>{siteConfig.email}</p>
+              <p>{siteConfig.address.street}</p>
               <p>{siteConfig.address.city}</p>
+            </Col>
+            <Col>
+              <h5>Trabalhe conosco</h5>
+              <a href={`mailto:${siteConfig.careersEmail}?subject=${encodeURIComponent('Currículo - Trabalhe conosco')}`}>
+                Envie seu currículo
+              </a>
             </Col>
           </Cols>
         </Top>
@@ -159,9 +166,6 @@ const Footer = () => {
             </a>
             <a href={siteConfig.socials.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebook />
-            </a>
-            <a href={siteConfig.socials.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-              <FaTiktok />
             </a>
           </Socials>
         </Bottom>

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaWhatsapp, FaStar } from 'react-icons/fa';
+import { FaShoppingBag } from 'react-icons/fa';
 import { GiCactus } from 'react-icons/gi';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import SafeImage from '../ui/SafeImage';
 import { media } from '../../styles/theme';
-import { whatsappLink } from '../../data/siteConfig';
+import { orderLink } from '../../data/siteConfig';
 
 const Section = styled.section`
   position: relative;
@@ -53,31 +53,6 @@ const Content = styled(Container)`
   }
 `;
 
-const Badge = styled(motion.div)`
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(244, 231, 211, 0.1);
-  border: 1px solid rgba(244, 231, 211, 0.25);
-  padding: 8px 18px;
-  border-radius: ${({ theme }) => theme.radius.pill};
-  font-family: ${({ theme }) => theme.fonts.heading};
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.gold};
-  margin-bottom: 24px;
-
-  svg {
-    font-size: 1rem;
-  }
-
-  ${media.lg} {
-    margin-inline: auto;
-  }
-`;
-
 const Title = styled(motion.h1)`
   font-family: ${({ theme }) => theme.fonts.display};
   font-size: clamp(3rem, 7vw, 5.6rem);
@@ -89,8 +64,7 @@ const Title = styled(motion.h1)`
   span {
     display: block;
     color: transparent;
-    -webkit-text-stroke: 2px ${({ theme }) => theme.colors.fireLight};
-    background: linear-gradient(135deg, ${({ theme }) => theme.colors.fireLight}, ${({ theme }) => theme.colors.gold});
+    background: linear-gradient(135deg, ${({ theme }) => theme.colors.cactusLight}, ${({ theme }) => theme.colors.cactus});
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -241,18 +215,14 @@ const Hero = () => {
 
       <Content>
         <div>
-          <Badge initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <FaStar /> Aracaju, SE — Artesanal desde sempre
-          </Badge>
-
           <Title initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            Sabor que
-            <span>Queima na Brasa</span>
+            O hambúrguer
+            <span>Com Tempero Nordestino</span>
           </Title>
 
           <Subtitle initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-            Blends selecionados, pão brioche fresquinho e ingredientes de verdade.
-            O hambúrguer artesanal que Aracaju escolheu para chamar de favorito.
+            Carne suculenta, queijo coalho, banana-da-terra, coentro e pimenta-de-cheiro —
+            a mistura que deu certo e criou um hambúrguer com sabor marcante e muita personalidade.
           </Subtitle>
 
           <Actions initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
@@ -260,13 +230,13 @@ const Hero = () => {
               Ver Cardápio
             </Button>
             <Button
-              href={whatsappLink('Olá! Quero fazer um pedido na Cactus Burguer 🌵🍔')}
+              href={orderLink}
               target="_blank"
               rel="noopener noreferrer"
               $variant="outline"
               $size="lg"
             >
-              <FaWhatsapp /> Pedir agora
+              <FaShoppingBag /> Pedir agora
             </Button>
           </Actions>
 
@@ -290,7 +260,7 @@ const Hero = () => {
           <PlateCircle>
             <SafeImage
               src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
-              alt="Cactus Clássico"
+              alt="Maria Bonita, hambúrguer com queijo coalho e banana-da-terra"
             />
           </PlateCircle>
           <CactusIcon />
@@ -301,8 +271,8 @@ const Hero = () => {
           >
             <GiCactus />
             <div>
-              <strong>Cactus Clássico</strong>
-              <small>O mais pedido da casa</small>
+              <strong>Maria Bonita</strong>
+              <small>Queijo coalho, banana-da-terra e pimenta-de-cheiro</small>
             </div>
           </FloatBadge>
         </VisualWrap>

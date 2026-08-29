@@ -1,13 +1,13 @@
-import { useState } from 'react';
 import styled from 'styled-components';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { FaShoppingBag } from 'react-icons/fa';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import SafeImage from '../ui/SafeImage';
+import Button from '../ui/Button';
 import { media } from '../../styles/theme';
-import { menuCategories, menuItems } from '../../data/menuData';
-import { whatsappLink } from '../../data/siteConfig';
+import { menuHighlights } from '../../data/menuData';
+import { orderLink } from '../../data/siteConfig';
 
 const Section = styled.section`
   padding: 120px 0;
@@ -15,36 +15,11 @@ const Section = styled.section`
   position: relative;
 `;
 
-const Tabs = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 56px;
-`;
-
-const Tab = styled.button`
-  padding: 12px 26px;
-  border-radius: ${({ theme }) => theme.radius.pill};
-  border: 1px solid ${({ $active, theme }) => ($active ? theme.colors.fire : 'rgba(244,231,211,0.2)')};
-  background: ${({ $active, theme }) => ($active ? theme.colors.fire : 'transparent')};
-  color: ${({ theme }) => theme.colors.cream};
-  font-family: ${({ theme }) => theme.fonts.heading};
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  transition: all 0.25s ease;
-
-  &:hover {
-    border-color: ${({ theme }) => theme.colors.fire};
-  }
-`;
-
 const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
+  margin-bottom: 56px;
 
   ${media.lg} {
     grid-template-columns: repeat(2, 1fr);
@@ -65,7 +40,7 @@ const Card = styled(motion.div)`
   &:hover {
     transform: translateY(-8px);
     box-shadow: ${({ theme }) => theme.shadow.lg};
-    border-color: rgba(228, 98, 43, 0.4);
+    border-color: rgba(182, 234, 81, 0.4);
   }
 `;
 
@@ -79,8 +54,8 @@ const Tag = styled.span`
   top: 14px;
   left: 14px;
   z-index: 2;
-  background: ${({ theme }) => theme.colors.fire};
-  color: ${({ theme }) => theme.colors.cream};
+  background: ${({ theme }) => theme.colors.cactus};
+  color: ${({ theme }) => theme.colors.charcoal};
   padding: 5px 14px;
   border-radius: ${({ theme }) => theme.radius.pill};
   font-size: 0.7rem;
@@ -118,7 +93,6 @@ const CardDesc = styled.p`
   font-size: 0.88rem;
   color: ${({ theme }) => theme.colors.textOnDarkMuted};
   margin-bottom: 18px;
-  min-height: 42px;
 `;
 
 const OrderLink = styled.a`
@@ -138,6 +112,16 @@ const OrderLink = styled.a`
   }
 `;
 
+const FullMenuCta = styled(motion.div)`
+  text-align: center;
+
+  p {
+    font-size: 1rem;
+    color: ${({ theme }) => theme.colors.textOnDarkMuted};
+    margin-bottom: 22px;
+  }
+`;
+
 const containerVariants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.08 } },
@@ -149,9 +133,6 @@ const cardVariants = {
 };
 
 const Menu = () => {
-  const [active, setActive] = useState('classicos');
-  const items = menuItems.filter((item) => item.category === active);
-
   return (
     <Section id="cardapio">
       <Container>
@@ -160,46 +141,44 @@ const Menu = () => {
           kicker="Cardápio"
           title={
             <>
-              Feito na brasa, <span>com amor</span>
+              Um cardápio <span>diferente de verdade</span>
             </>
           }
-          subtitle="Escolha sua categoria favorita e descubra os sabores que fazem da Cactus Burguer a queridinha de Aracaju."
+          subtitle="Os destaques da casa. Para ver tudo — burgers, combos, bebidas e mais — é só conferir o cardápio completo."
         />
 
-        <Tabs>
-          {menuCategories.map((cat) => (
-            <Tab key={cat.id} $active={active === cat.id} onClick={() => setActive(cat.id)}>
-              {cat.label}
-            </Tab>
+        <Grid variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+          {menuHighlights.map((item) => (
+            <Card key={item.id} variants={cardVariants}>
+              <CardImage>
+                {item.tag && <Tag>{item.tag}</Tag>}
+                <SafeImage src={item.image} alt={item.name} />
+              </CardImage>
+              <CardBody>
+                <CardTop>
+                  <h3>{item.name}</h3>
+                  <strong>{item.price}</strong>
+                </CardTop>
+                {item.description && <CardDesc>{item.description}</CardDesc>}
+                <OrderLink href={orderLink} target="_blank" rel="noopener noreferrer">
+                  <FaShoppingBag /> Pedir esse
+                </OrderLink>
+              </CardBody>
+            </Card>
           ))}
-        </Tabs>
+        </Grid>
 
-        <AnimatePresence mode="wait">
-          <Grid key={active} variants={containerVariants} initial="hidden" animate="show">
-            {items.map((item) => (
-              <Card key={item.id} variants={cardVariants}>
-                <CardImage>
-                  {item.tag && <Tag>{item.tag}</Tag>}
-                  <SafeImage src={item.image} alt={item.name} />
-                </CardImage>
-                <CardBody>
-                  <CardTop>
-                    <h3>{item.name}</h3>
-                    <strong>{item.price}</strong>
-                  </CardTop>
-                  <CardDesc>{item.description}</CardDesc>
-                  <OrderLink
-                    href={whatsappLink(`Olá! Quero pedir: ${item.name} 🌵🍔`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaWhatsapp /> Pedir esse
-                  </OrderLink>
-                </CardBody>
-              </Card>
-            ))}
-          </Grid>
-        </AnimatePresence>
+        <FullMenuCta
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <p>Quer ver tudo? Burgers, combos, bebidas e mais no nosso cardápio completo.</p>
+          <Button href={orderLink} target="_blank" rel="noopener noreferrer" $variant="primary" $size="lg">
+            <FaShoppingBag /> Ver cardápio completo e pedir
+          </Button>
+        </FullMenuCta>
       </Container>
     </Section>
   );

@@ -26,13 +26,13 @@ export const galleryImages = [
   {
     id: 5,
     src: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80',
-    alt: 'Cactus Gourmet',
+    alt: 'Maria Bonita',
     size: 'medium',
   },
   {
     id: 6,
     src: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80',
-    alt: 'Hambúrguer picante',
+    alt: 'Lampião',
     size: 'large',
   },
 ];

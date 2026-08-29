@@ -53,7 +53,7 @@ const Badge = styled(motion.div)`
   left: 50%;
   transform: translateX(-50%);
   background: ${({ theme }) => theme.colors.cactus};
-  color: ${({ theme }) => theme.colors.cream};
+  color: ${({ theme }) => theme.colors.charcoal};
   padding: 20px 26px;
   border-radius: ${({ theme }) => theme.radius.md};
   box-shadow: ${({ theme }) => theme.shadow.md};
@@ -106,7 +106,7 @@ const Feature = styled(motion.div)`
 
   svg {
     font-size: 2rem;
-    color: ${({ theme }) => theme.colors.fire};
+    color: ${({ theme }) => theme.colors.cactus};
     margin-bottom: 12px;
   }
 
@@ -125,7 +125,7 @@ const Feature = styled(motion.div)`
 const features = [
   { icon: GiBarbecue, title: 'Grelha na Brasa', text: 'Carne suculenta no ponto certo, sempre.' },
   { icon: GiWheat, title: 'Pão Artesanal', text: 'Brioche fresquinho feito todos os dias.' },
-  { icon: GiChiliPepper, title: 'Toque Especial', text: 'Molhos e temperos exclusivos da casa.' },
+  { icon: GiChiliPepper, title: 'Toque Nordestino', text: 'Coentro, pimenta-de-cheiro e ingredientes que vêm da nossa terra.' },
 ];
 
 const About = () => {
@@ -163,7 +163,11 @@ const About = () => {
             <SectionHeading
               align="left"
               kicker="Nossa história"
-              title="Do fogo à mesa, com raízes em Aracaju"
+              title={
+                <>
+                  A mistura que <span>deu certo</span>
+                </>
+              }
             />
             <Lead
               initial={{ opacity: 0, y: 16 }}
@@ -171,10 +175,11 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              A Cactus Burguer nasceu da vontade de trazer para Aracaju um hambúrguer
-              de verdade: carne de qualidade, pão fresco e receitas autorais. Cada
-              lanche é montado na hora, na brasa, respeitando o tempo de cada
-              ingrediente — porque comida boa não tem pressa.
+              A Cactus nasceu com uma ideia simples: pegar o hambúrguer que todo
+              mundo ama e colocar nele os sabores que fazem parte da nossa terra.
+              Carne suculenta, queijo coalho, banana-da-terra, coentro,
+              pimenta-de-cheiro e outros ingredientes nordestinos criam combinações
+              que você provavelmente nunca imaginou encontrar em um hambúrguer.
             </Lead>
             <Lead
               initial={{ opacity: 0, y: 16 }}
@@ -182,8 +187,9 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Hoje somos ponto de encontro de quem busca sabor autêntico e um
-              ambiente descontraído, com aquele tempero de hospitalidade sergipana.
+              Foi aí que a Cactus ganhou seu jeito próprio: hambúrguer artesanal,
+              sabor marcante e muita personalidade. Hoje somos ponto de encontro de
+              quem gosta de experimentar sabores diferentes de verdade.
             </Lead>
 
             <Features>

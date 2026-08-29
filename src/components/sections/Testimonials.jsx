@@ -37,7 +37,7 @@ const Card = styled(motion.div)`
 
 const QuoteIcon = styled(FaQuoteLeft)`
   font-size: 1.6rem;
-  color: ${({ theme }) => theme.colors.fire};
+  color: ${({ theme }) => theme.colors.cactus};
   opacity: 0.35;
   margin-bottom: 14px;
 `;
@@ -70,11 +70,11 @@ const Avatar = styled.div`
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.fireLight}, ${({ theme }) => theme.colors.fire});
+  background: linear-gradient(135deg, ${({ theme }) => theme.colors.cactusLight}, ${({ theme }) => theme.colors.cactus});
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.colors.cream};
+  color: ${({ theme }) => theme.colors.charcoal};
   font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: 700;
 `;

@@ -13,13 +13,13 @@ const sizes = {
 
 const variants = {
   primary: css`
-    background: linear-gradient(135deg, ${({ theme }) => theme.colors.fireLight}, ${({ theme }) => theme.colors.fire});
-    color: ${({ theme }) => theme.colors.cream};
-    box-shadow: 0 10px 24px rgba(193, 68, 14, 0.45);
+    background: linear-gradient(135deg, ${({ theme }) => theme.colors.cactusLight}, ${({ theme }) => theme.colors.cactus});
+    color: ${({ theme }) => theme.colors.charcoal};
+    box-shadow: 0 10px 24px rgba(182, 234, 81, 0.45);
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 16px 30px rgba(193, 68, 14, 0.55);
+      box-shadow: 0 16px 30px rgba(182, 234, 81, 0.55);
     }
   `,
   outline: css`
@@ -45,12 +45,12 @@ const variants = {
   `,
   cactus: css`
     background: linear-gradient(135deg, ${({ theme }) => theme.colors.cactusLight}, ${({ theme }) => theme.colors.cactus});
-    color: ${({ theme }) => theme.colors.cream};
-    box-shadow: 0 10px 24px rgba(92, 122, 78, 0.45);
+    color: ${({ theme }) => theme.colors.charcoal};
+    box-shadow: 0 10px 24px rgba(182, 234, 81, 0.45);
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 16px 30px rgba(92, 122, 78, 0.55);
+      box-shadow: 0 16px 30px rgba(182, 234, 81, 0.55);
     }
   `,
 };

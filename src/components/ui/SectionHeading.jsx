@@ -17,14 +17,14 @@ const Kicker = styled(motion.span)`
   font-size: 0.8rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.fire};
+  color: ${({ theme }) => theme.colors.cactus};
   margin-bottom: 14px;
 
   &::before {
     content: '';
     width: 30px;
     height: 3px;
-    background: ${({ theme }) => theme.colors.fire};
+    background: ${({ theme }) => theme.colors.cactus};
     border-radius: 4px;
   }
 `;
@@ -37,7 +37,7 @@ const Title = styled(motion.h2)`
   color: ${({ $dark, theme }) => ($dark ? theme.colors.textOnDark : theme.colors.charcoal)};
 
   span {
-    color: ${({ theme }) => theme.colors.fire};
+    color: ${({ theme }) => theme.colors.cactus};
   }
 
   ${media.sm} {

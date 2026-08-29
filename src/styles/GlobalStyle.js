@@ -53,8 +53,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: ${({ theme }) => theme.colors.fire};
-    color: ${({ theme }) => theme.colors.cream};
+    background: ${({ theme }) => theme.colors.cactus};
+    color: ${({ theme }) => theme.colors.charcoal};
   }
 
   ::-webkit-scrollbar {
@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 10px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: ${({ theme }) => theme.colors.fire};
+    background: ${({ theme }) => theme.colors.cactus};
   }
 `;
 

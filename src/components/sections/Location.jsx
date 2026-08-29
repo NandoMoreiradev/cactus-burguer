@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaClock, FaPhoneAlt, FaWhatsapp, FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaClock, FaPhoneAlt, FaShoppingBag, FaInstagram, FaFacebook } from 'react-icons/fa';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import Button from '../ui/Button';
 import { media } from '../../styles/theme';
-import siteConfig, { whatsappLink } from '../../data/siteConfig';
+import siteConfig, { whatsappLink, orderLink } from '../../data/siteConfig';
 
 const Section = styled.section`
   padding: 120px 0;
@@ -41,7 +41,7 @@ const InfoRow = styled.div`
 
   svg {
     font-size: 1.3rem;
-    color: ${({ theme }) => theme.colors.fireLight};
+    color: ${({ theme }) => theme.colors.cactusLight};
     margin-top: 3px;
     flex-shrink: 0;
   }
@@ -59,7 +59,7 @@ const InfoRow = styled.div`
   }
 
   a:hover {
-    color: ${({ theme }) => theme.colors.fireLight};
+    color: ${({ theme }) => theme.colors.cactusLight};
   }
 `;
 
@@ -100,8 +100,9 @@ const SocialIcon = styled.a`
   transition: all 0.25s ease;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.fire};
-    border-color: ${({ theme }) => theme.colors.fire};
+    background: ${({ theme }) => theme.colors.cactus};
+    border-color: ${({ theme }) => theme.colors.cactus};
+    color: ${({ theme }) => theme.colors.charcoal};
     transform: translateY(-3px);
   }
 `;
@@ -124,7 +125,7 @@ const MapWrap = styled(motion.div)`
 
 const CtaBar = styled(motion.div)`
   margin-top: 60px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.fire}, ${({ theme }) => theme.colors.ember});
+  background: linear-gradient(135deg, ${({ theme }) => theme.colors.cactusLight}, ${({ theme }) => theme.colors.cactus});
   border-radius: ${({ theme }) => theme.radius.lg};
   padding: 44px;
   display: flex;
@@ -136,12 +137,12 @@ const CtaBar = styled(motion.div)`
   h3 {
     font-family: ${({ theme }) => theme.fonts.display};
     font-size: clamp(1.6rem, 3vw, 2.2rem);
-    color: ${({ theme }) => theme.colors.cream};
+    color: ${({ theme }) => theme.colors.charcoal};
     text-transform: uppercase;
   }
 
   p {
-    color: rgba(244, 231, 211, 0.85);
+    color: rgba(28, 20, 16, 0.75);
     margin-top: 6px;
   }
 `;
@@ -172,7 +173,7 @@ const Location = () => {
               <div>
                 <h4>Endereço</h4>
                 <p>{siteConfig.address.street}</p>
-                <p>{siteConfig.address.city} — {siteConfig.address.cep}</p>
+                <p>{siteConfig.address.city}</p>
               </div>
             </InfoRow>
 
@@ -209,9 +210,6 @@ const Location = () => {
               <SocialIcon href={siteConfig.socials.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebook />
               </SocialIcon>
-              <SocialIcon href={siteConfig.socials.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                <FaTiktok />
-              </SocialIcon>
             </Socials>
           </InfoCard>
 
@@ -222,17 +220,17 @@ const Location = () => {
 
         <CtaBar initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <div>
-            <h3>Bateu a fome?</h3>
-            <p>Peça agora pelo WhatsApp e receba direto na sua casa.</p>
+            <h3>Seu próximo hambúrguer favorito pode estar aqui</h3>
+            <p>Peça seu Cactus pelo delivery ou venha viver essa experiência na nossa loja.</p>
           </div>
           <Button
-            href={whatsappLink('Olá! Quero fazer um pedido na Cactus Burguer 🌵🍔')}
+            href={orderLink}
             target="_blank"
             rel="noopener noreferrer"
             $variant="dark"
             $size="lg"
           >
-            <FaWhatsapp /> Chamar no WhatsApp
+            <FaShoppingBag /> Fazer pedido
           </Button>
         </CtaBar>
       </Container>

@@ -9,6 +9,10 @@ import { testimonials } from '../../data/testimonialsData';
 const Section = styled.section`
   padding: 120px 0;
   background: linear-gradient(180deg, ${({ theme }) => theme.colors.bg}, ${({ theme }) => theme.colors.kraft});
+
+  ${media.md} {
+    padding: 70px 0;
+  }
 `;
 
 const Grid = styled.div`

@@ -43,14 +43,20 @@ const Fallback = styled.div`
   }
 `;
 
-const SafeImage = ({ src, alt, icon, className }) => {
+const SafeImage = ({ src, alt, icon, className, priority = false }) => {
   const [errored, setErrored] = useState(false);
   const Icon = icon || GiHamburger;
 
   return (
     <Wrap className={className}>
       {!errored && (
-        <StyledImg src={src} alt={alt} loading="lazy" onError={() => setErrored(true)} />
+        <StyledImg
+          src={src}
+          alt={alt}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+          onError={() => setErrored(true)}
+        />
       )}
       {errored && (
         <Fallback>

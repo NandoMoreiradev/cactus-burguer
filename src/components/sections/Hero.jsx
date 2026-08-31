@@ -7,7 +7,6 @@ import Button from '../ui/Button';
 import SafeImage from '../ui/SafeImage';
 import { media } from '../../styles/theme';
 import { orderLink } from '../../data/siteConfig';
-import heroBg from '../../assets/7.jpg';
 import heroPlate from '../../assets/1.jpg';
 
 const Section = styled.section`
@@ -211,8 +210,9 @@ const Hero = () => {
   return (
     <Section id="home">
       <BgImage
-        src={heroBg}
+        src="/hero-bg.jpg"
         alt="Hambúrguer artesanal Cactus Burguer"
+        priority
       />
       <Scrim />
 
@@ -264,6 +264,7 @@ const Hero = () => {
             <SafeImage
               src={heroPlate}
               alt="Maria Bonita, hambúrguer com queijo coalho e banana-da-terra"
+              priority
             />
           </PlateCircle>
           <CactusIcon />

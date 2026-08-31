@@ -13,6 +13,10 @@ const Section = styled.section`
   padding: 120px 0;
   background: ${({ theme }) => theme.colors.charcoal};
   position: relative;
+
+  ${media.md} {
+    padding: 70px 0;
+  }
 `;
 
 const Grid = styled(motion.div)`

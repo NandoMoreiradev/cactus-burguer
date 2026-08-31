@@ -110,6 +110,24 @@ const Socials = styled.div`
   }
 `;
 
+const Credit = styled.p`
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: ${({ theme }) => theme.colors.textOnDarkMuted};
+
+  a {
+    color: ${({ theme }) => theme.colors.textOnDarkMuted};
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: ${({ theme }) => theme.colors.cactusLight};
+  }
+`;
+
 const Footer = () => {
   const year = new Date().getFullYear();
 
@@ -158,6 +176,14 @@ const Footer = () => {
             </a>
           </Socials>
         </Bottom>
+
+        <Credit>
+          Desenvolvido por{' '}
+          <a href="https://www.instagram.com/eu_nando_moreira/" target="_blank" rel="noopener noreferrer">
+            Fernando Moreira
+          </a>{' '}
+          com bastante afinco.
+        </Credit>
       </Container>
     </Wrap>
   );

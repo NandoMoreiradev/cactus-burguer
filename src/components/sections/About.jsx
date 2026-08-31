@@ -13,6 +13,10 @@ const Section = styled.section`
   background: ${({ theme }) => theme.colors.bg};
   position: relative;
   overflow: hidden;
+
+  ${media.md} {
+    padding: 70px 0;
+  }
 `;
 
 const Grid = styled.div`

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { media } from '../../styles/theme';
 
 const sizes = {
   md: css`
@@ -68,12 +69,18 @@ const Button = styled.a`
   border-radius: ${({ theme }) => theme.radius.pill};
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
   white-space: nowrap;
+  text-align: center;
 
   ${({ $size }) => sizes[$size || 'md']}
   ${({ $variant }) => variants[$variant || 'primary']}
 
   &:active {
     transform: translateY(0);
+  }
+
+  ${media.sm} {
+    white-space: normal;
+    padding: ${({ $size }) => ($size === 'lg' ? '16px 26px' : '12px 22px')};
   }
 `;
 

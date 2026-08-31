@@ -11,6 +11,10 @@ const Section = styled.section`
   padding: 120px 0;
   background: ${({ theme }) => theme.colors.charcoal};
   position: relative;
+
+  ${media.md} {
+    padding: 70px 0;
+  }
 `;
 
 const Grid = styled.div`
@@ -32,6 +36,10 @@ const InfoCard = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 26px;
+
+  ${media.sm} {
+    padding: 26px;
+  }
 `;
 
 const InfoRow = styled.div`
@@ -133,6 +141,10 @@ const CtaBar = styled(motion.div)`
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
+
+  ${media.sm} {
+    padding: 30px;
+  }
 
   h3 {
     font-family: ${({ theme }) => theme.fonts.display};

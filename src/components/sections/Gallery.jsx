@@ -9,6 +9,10 @@ import { galleryImages } from '../../data/galleryData';
 const Section = styled.section`
   padding: 120px 0;
   background: ${({ theme }) => theme.colors.bg};
+
+  ${media.md} {
+    padding: 70px 0;
+  }
 `;
 
 const Grid = styled.div`

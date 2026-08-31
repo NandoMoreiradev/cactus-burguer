@@ -7,6 +7,8 @@ import Button from '../ui/Button';
 import SafeImage from '../ui/SafeImage';
 import { media } from '../../styles/theme';
 import { orderLink } from '../../data/siteConfig';
+import heroBg from '../../assets/7.jpg';
+import heroPlate from '../../assets/1.jpg';
 
 const Section = styled.section`
   position: relative;
@@ -59,6 +61,7 @@ const Title = styled(motion.h1)`
   line-height: 0.95;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.cream};
+  margin-top: 40px;
   margin-bottom: 22px;
 
   span {
@@ -208,7 +211,7 @@ const Hero = () => {
   return (
     <Section id="home">
       <BgImage
-        src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=1800&q=80"
+        src={heroBg}
         alt="Hambúrguer artesanal Cactus Burguer"
       />
       <Scrim />
@@ -259,7 +262,7 @@ const Hero = () => {
         <VisualWrap initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.2 }}>
           <PlateCircle>
             <SafeImage
-              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
+              src={heroPlate}
               alt="Maria Bonita, hambúrguer com queijo coalho e banana-da-terra"
             />
           </PlateCircle>

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { GiCactus } from 'react-icons/gi';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
 import Container from '../ui/Container';
 import { media } from '../../styles/theme';
@@ -27,19 +26,10 @@ const Top = styled.div`
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: ${({ theme }) => theme.fonts.display};
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.cream};
 
-  svg {
-    color: ${({ theme }) => theme.colors.cactusLight};
-    font-size: 1.7rem;
-  }
-
-  span {
-    color: ${({ theme }) => theme.colors.cactusLight};
+  img {
+    height: 64px;
+    width: auto;
   }
 `;
 
@@ -129,8 +119,7 @@ const Footer = () => {
         <Top>
           <div>
             <Logo>
-              <GiCactus />
-              Cactus<span>Burguer</span>
+              <img src="/logo.png" alt="Cactus Burguer" />
             </Logo>
             <Tagline>{siteConfig.tagline}, direto de Aracaju para você.</Tagline>
           </div>

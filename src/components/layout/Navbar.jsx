@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
-import { GiCactus } from 'react-icons/gi';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import { media } from '../../styles/theme';
@@ -41,20 +40,10 @@ const Inner = styled.div`
 const Logo = styled.a`
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: ${({ theme }) => theme.fonts.display};
-  font-size: 1.6rem;
-  letter-spacing: 0.03em;
-  color: ${({ theme }) => theme.colors.cream};
-  text-transform: uppercase;
 
-  svg {
-    color: ${({ theme }) => theme.colors.cactusLight};
-    font-size: 1.8rem;
-  }
-
-  span {
-    color: ${({ theme }) => theme.colors.cactusLight};
+  img {
+    height: 68px;
+    width: auto;
   }
 `;
 
@@ -165,8 +154,7 @@ const Navbar = () => {
       <Container>
         <Inner>
           <Logo href="#home">
-            <GiCactus />
-            Cactus<span>Burguer</span>
+            <img src="/logo.png" alt="Cactus Burguer" />
           </Logo>
 
           <Links>

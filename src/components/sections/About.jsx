@@ -5,6 +5,8 @@ import Container from '../ui/Container';
 import SafeImage from '../ui/SafeImage';
 import SectionHeading from '../ui/SectionHeading';
 import { media } from '../../styles/theme';
+import aboutInterior from '../../assets/6.jpg';
+import aboutPrep from '../../assets/3.jpg';
 
 const Section = styled.section`
   padding: 120px 0;
@@ -146,13 +148,13 @@ const About = () => {
             <VisualGrid>
               <ImgBox>
                 <SafeImage
-                  src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=700&q=80"
+                  src={aboutInterior}
                   alt="Interior da hamburgueria Cactus Burguer"
                 />
               </ImgBox>
               <ImgBox>
                 <SafeImage
-                  src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"
+                  src={aboutPrep}
                   alt="Preparo do hambúrguer artesanal"
                 />
               </ImgBox>

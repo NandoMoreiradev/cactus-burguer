@@ -73,22 +73,12 @@ const Title = styled(motion.h1)`
   }
 `;
 
-const Subtitle = styled(motion.p)`
-  font-size: 1.15rem;
-  color: ${({ theme }) => theme.colors.textOnDarkMuted};
-  max-width: 480px;
-  margin-bottom: 36px;
-
-  ${media.lg} {
-    margin-inline: auto;
-  }
-`;
-
 const Actions = styled(motion.div)`
   display: flex;
   align-items: center;
   gap: 18px;
   flex-wrap: wrap;
+  margin-top: 32px;
 
   ${media.lg} {
     justify-content: center;
@@ -222,11 +212,6 @@ const Hero = () => {
             Hambúrguer artesanal
             <span>com gostinho do Nordeste a cada mordida</span>
           </Title>
-
-          <Subtitle initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-            Carne suculenta, queijo coalho, banana-da-terra, coentro e pimenta-de-cheiro —
-            a mistura que deu certo e criou um hambúrguer com sabor marcante e muita personalidade.
-          </Subtitle>
 
           <Actions initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
             <Button href="#cardapio" $variant="primary" $size="lg">

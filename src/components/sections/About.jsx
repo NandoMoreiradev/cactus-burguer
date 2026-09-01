@@ -130,7 +130,7 @@ const Feature = styled(motion.div)`
 
 const features = [
   { icon: GiBarbecue, title: 'Grelha na Brasa', text: 'Carne suculenta no ponto certo, sempre.' },
-  { icon: GiWheat, title: 'Pão Artesanal', text: 'Brioche fresquinho feito todos os dias.' },
+  { icon: GiWheat, title: 'Pão Artesanal', text: 'De macaxeira. Fresquinho feito todos os dias.' },
   { icon: GiChiliPepper, title: 'Toque Nordestino', text: 'Coentro, pimenta-de-cheiro e ingredientes que vêm da nossa terra.' },
 ];
 

@@ -1,14 +1,14 @@
 const siteConfig = {
   name: 'Cactus Burguer',
-  tagline: 'Hambúrguer artesanal com sabor nordestino',
+  tagline: 'Hambúrguer artesanal com gostinho do Nordeste em cada mordida',
   whatsapp: '5579999400555',
   whatsappDisplay: '(79) 99940-0555',
   phoneDisplay: '(79) 99940-0555',
   careersEmail: 'cactus1burguer@gmail.com',
   address: {
-    street: 'Rua Urquiza Leal, 122, Grageru',
+    street: 'Rua Urquiza Leal, 122, Salgado Filho',
     city: 'Aracaju - SE',
-    mapsQuery: 'Rua Urquiza Leal, 122, Grageru, Aracaju - SE',
+    mapsQuery: 'Rua Urquiza Leal, 122, Salgado Filho, Aracaju - SE',
   },
   hours: [
     { day: 'Terça a Domingo', time: '18h às 22h45' },

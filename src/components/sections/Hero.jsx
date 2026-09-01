@@ -56,7 +56,7 @@ const Content = styled(Container)`
 
 const Title = styled(motion.h1)`
   font-family: ${({ theme }) => theme.fonts.display};
-  font-size: clamp(3rem, 7vw, 5.6rem);
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
   line-height: 0.95;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.cream};
@@ -219,8 +219,8 @@ const Hero = () => {
       <Content>
         <div>
           <Title initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-            O hambúrguer
-            <span>Com Tempero Nordestino</span>
+            Hambúrguer artesanal
+            <span>com gostinho do Nordeste a cada mordida</span>
           </Title>
 
           <Subtitle initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
@@ -287,7 +287,7 @@ const Hero = () => {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
       >
-        Scroll
+        Role
       </ScrollHint>
     </Section>
   );

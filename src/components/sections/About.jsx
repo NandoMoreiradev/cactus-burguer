@@ -5,8 +5,8 @@ import Container from '../ui/Container';
 import SafeImage from '../ui/SafeImage';
 import SectionHeading from '../ui/SectionHeading';
 import { media } from '../../styles/theme';
-import aboutInterior from '../../assets/6.jpg';
-import aboutPrep from '../../assets/3.jpg';
+import aboutInterior from '../../assets/10.jpg';
+import aboutPrep from '../../assets/11.jpg';
 
 const Section = styled.section`
   padding: 120px 0;

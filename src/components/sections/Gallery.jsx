@@ -17,27 +17,24 @@ const Section = styled.section`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 140px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 
   ${media.md} {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 130px;
   }
 `;
 
-const spanMap = {
-  large: 'grid-column: span 2; grid-row: span 2;',
-  medium: 'grid-column: span 1; grid-row: span 2;',
-  small: 'grid-column: span 1; grid-row: span 1;',
-};
-
 const Item = styled(motion.div)`
   position: relative;
+  aspect-ratio: ${({ $aspectRatio }) => $aspectRatio || '5 / 4'};
   border-radius: ${({ theme }) => theme.radius.md};
   overflow: hidden;
-  ${({ $size }) => spanMap[$size] || spanMap.small}
+  ${({ $center }) => $center && 'grid-column: 2;'}
+
+  ${media.md} {
+    grid-column: auto;
+  }
 
   img {
     transition: transform 0.5s ease;
@@ -79,13 +76,14 @@ const Gallery = () => {
           {galleryImages.map((img, i) => (
             <Item
               key={img.id}
-              $size={img.size}
+              $aspectRatio={img.aspectRatio}
+              $center={galleryImages.length % 3 === 1 && i === galleryImages.length - 1}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
             >
-              <SafeImage src={img.src} alt={img.alt} />
+              <SafeImage src={img.src} alt={img.alt} fit="contain" />
             </Item>
           ))}
         </Grid>

@@ -145,7 +145,7 @@ const Menu = () => {
           kicker="Cardápio"
           title={
             <>
-              Um cardápio <span>diferente de verdade</span>
+              Um cardápio <br /><span>diferente de verdade</span>
             </>
           }
           subtitle="Os destaques da casa. Para ver tudo — burgers, combos, bebidas e mais — é só conferir o cardápio completo."

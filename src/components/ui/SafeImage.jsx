@@ -13,7 +13,7 @@ const Wrap = styled.div`
 const StyledImg = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: ${({ $fit }) => $fit};
   display: ${({ $hidden }) => ($hidden ? 'none' : 'block')};
 `;
 
@@ -43,7 +43,7 @@ const Fallback = styled.div`
   }
 `;
 
-const SafeImage = ({ src, alt, icon, className, priority = false }) => {
+const SafeImage = ({ src, alt, icon, className, priority = false, fit = 'cover' }) => {
   const [errored, setErrored] = useState(false);
   const Icon = icon || GiHamburger;
 
@@ -53,6 +53,7 @@ const SafeImage = ({ src, alt, icon, className, priority = false }) => {
         <StyledImg
           src={src}
           alt={alt}
+          $fit={fit}
           loading={priority ? 'eager' : 'lazy'}
           fetchPriority={priority ? 'high' : 'auto'}
           onError={() => setErrored(true)}

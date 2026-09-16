@@ -1,6 +1,6 @@
-import sertaoImg from '../assets/4.jpg';
-import xiqueXiqueImg from '../assets/9.jpg';
-import ducabruncoImg from '../assets/5.jpg';
+import sertaoImg from '../assets/sertao.jpg';
+import marmininoImg from '../assets/marminino.jpg';
+import ducabruncoImg from '../assets/ducabrunco.jpg';
 
 // Itens da categoria "Burguer" no cardápio oficial (xmenu) — mantenha sincronizado com
 // https://xmenu.com.br/pedidos/?loja=20996 sempre que o cardápio mudar por lá.
@@ -15,10 +15,10 @@ export const menuHighlights = [
   },
   {
     id: 2,
-    name: 'Xique Xique',
+    name: 'Marminino',
     description: 'Pão de macaxeira, carne, cheddar, cebola caramelizada, bacon, picles de pepino, tomate e alface.',
     price: 'R$ 32,00',
-    image: xiqueXiqueImg,
+    image: marmininoImg,
     tag: null,
   },
   {

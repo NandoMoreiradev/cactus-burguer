@@ -1,45 +1,40 @@
-import img2 from '../assets/2.jpg';
-import img5 from '../assets/5.jpg';
-import img6 from '../assets/6.jpg';
-import img7 from '../assets/7.jpg';
-import img8 from '../assets/8.jpg';
-import img9 from '../assets/9.jpg';
+import img1 from '../assets/galeria/1.jpg';
+import img2 from '../assets/galeria/2.jpg';
+import img3 from '../assets/galeria/3.jpg';
+import img4 from '../assets/galeria/4.jpg';
+import img8 from '../assets/galeria/6.jpg';
+import img9 from '../assets/galeria/7.jpg';
 
 export const galleryImages = [
   {
     id: 1,
-    src: img2,
+    src: img1,
     alt: 'Hambúrguer artesanal Cactus Burguer',
-    size: 'large',
   },
   {
     id: 2,
-    src: img6,
+    src: img2,
     alt: 'Interior da hamburgueria',
-    size: 'small',
   },
   {
     id: 3,
-    src: img9,
+    src: img3,
     alt: 'Hambúrguer com batata rústica',
-    size: 'small',
   },
   {
     id: 4,
-    src: img8,
+    src: img4,
     alt: 'Batatas rústicas',
-    size: 'medium',
   },
   {
-    id: 5,
-    src: img5,
-    alt: 'Maria Bonita',
-    size: 'medium',
+    id: 8,
+    src: img8,
+    alt: 'Cactus Burguer',
+    aspectRatio: '4 / 5',
   },
   {
-    id: 6,
-    src: img7,
-    alt: 'Lampião',
-    size: 'large',
+    id: 9,
+    src: img9,
+    alt: 'Cactus Burguer',
   },
 ];

@@ -7,7 +7,7 @@ import Button from '../ui/Button';
 import SafeImage from '../ui/SafeImage';
 import { media } from '../../styles/theme';
 import { orderLink } from '../../data/siteConfig';
-import heroPlate from '../../assets/1.jpg';
+import heroPlate from '../../assets/1.png';
 
 const Section = styled.section`
   position: relative;

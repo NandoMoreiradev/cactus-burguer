@@ -148,7 +148,7 @@ const Menu = () => {
               Um cardápio <br /><span>diferente de verdade</span>
             </>
           }
-          subtitle="Os destaques da casa. Para ver tudo — burgers, combos, bebidas e mais — é só conferir o cardápio completo."
+          subtitle="Os destaques da casa. Para ver tudo — burgueres, combos, bebidas e mais — é só conferir o cardápio completo."
         />
 
         <Grid variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
@@ -178,7 +178,7 @@ const Menu = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p>Quer ver tudo? Burgers, combos, bebidas e mais no nosso cardápio completo.</p>
+          <p>Quer ver tudo? Burgusers, combos, bebidas e mais no nosso cardápio completo.</p>
           <Button href={orderLink} target="_blank" rel="noopener noreferrer" $variant="primary" $size="lg">
             <FaShoppingBag /> Ver cardápio completo e pedir
           </Button>

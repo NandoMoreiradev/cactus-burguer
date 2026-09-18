@@ -129,9 +129,9 @@ const Feature = styled(motion.div)`
 `;
 
 const features = [
-  { icon: GiBarbecue, title: 'Grelha na Brasa', text: 'Carne suculenta no ponto certo, sempre.' },
-  { icon: GiWheat, title: 'Pão Artesanal', text: 'De macaxeira. Fresquinho feito todos os dias.' },
-  { icon: GiChiliPepper, title: 'Toque Nordestino', text: 'Coentro, pimenta-de-cheiro e ingredientes que vêm da nossa terra.' },
+  { icon: GiBarbecue, title: 'Burguer na Chapa', text: 'Carne suculenta no ponto certo, sempre.' },
+  { icon: GiWheat, title: 'Artesanal', text: 'Pão de macaxeira, fresquinho, feito todos os dias.' },
+  { icon: GiChiliPepper, title: 'Toque Nordestino', text: 'Coentro, pimenta de cheiro, banana da terra, maxixe, queijo coalho...' },
 ];
 
 const About = () => {

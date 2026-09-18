@@ -132,6 +132,10 @@ const PlateCircle = styled.div`
   overflow: hidden;
   border: 6px solid rgba(244, 231, 211, 0.15);
   box-shadow: ${({ theme }) => theme.shadow.lg};
+
+  img {
+    object-position: 50% 80%;
+  }
 `;
 
 const FloatBadge = styled(motion.div)`
@@ -231,7 +235,7 @@ const Hero = () => {
           <Stats initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
             <Stat>
               <strong>15k+</strong>
-              <span>Burgers servidos</span>
+              <span>Burgueres servidos</span>
             </Stat>
             <Stat>
               <strong>4.9</strong>

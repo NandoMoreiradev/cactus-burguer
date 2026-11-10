@@ -36,5 +36,6 @@ export const galleryImages = [
     id: 9,
     src: img9,
     alt: 'Cactus Burguer',
+    aspectRatio: '4 / 5',
   },
 ];

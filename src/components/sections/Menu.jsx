@@ -178,7 +178,7 @@ const Menu = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p>Quer ver tudo? Burgusers, combos, bebidas e mais no nosso cardápio completo.</p>
+          <p>Quer ver tudo? Burguers, combos, bebidas e mais no nosso cardápio completo.</p>
           <Button href={orderLink} target="_blank" rel="noopener noreferrer" $variant="primary" $size="lg">
             <FaShoppingBag /> Ver cardápio completo e pedir
           </Button>
